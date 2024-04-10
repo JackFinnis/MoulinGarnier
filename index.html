@@ -1,0 +1,167 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Moulin Garnier</title>
+        
+		<!-- <link rel="icon" href="static/images/logos/dramsoc.jpg"> -->
+		<!-- <link rel="apple-touch-icon" href="static/images/logos/dramsoc.jpg"> -->
+        <!-- <meta property="og:image" content="static/images/general/summer_ball1.jpg"> -->
+        <meta name="viewport" content="width=device-width, viewport-fit=cover">
+
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:700,400"> -->
+        <link rel="stylesheet" href="static/style.css?v=1">
+        <script defer src="static/script.js?v=1"></script>
+    </head>
+    <body>
+        <div id="nav" class="center shadow">
+            <div id="nav_bar" class="center wide">
+                <div class="row no_gap">
+                    <button aria-hidden="true" type="button" id="nav_menu" class="nav_button" onclick="toggle_nav_buttons()">
+                        <img id="nav_menu_img" class="symbol">
+                    </button>
+                    <button type="button" class="nav_button" onclick="scroll_to('intro')">
+                        <h3>Moulin Garnier</h3>
+                    </button>
+                </div>
+                <button id="book_button" type="button" class="nav_button" onclick="scroll_to('book')">
+                    <h3>Book</h3>
+                </button>
+            </div>
+            <span id="nav_buttons" class="disclosed no_gap">
+                <button type="button" class="nav_button" onclick="scroll_to('about')">
+                    <h3>About</h3>
+                </button>
+                <button type="button" class="nav_button" onclick="scroll_to('photos')">
+                    <h3>Photos</h3>
+                </button>
+                <button type="button" class="nav_button" onclick="scroll_to('nearby')">
+                    <h3>Things To Do</h3>
+                </button>
+                <button type="button" class="nav_button" onclick="scroll_to('directions')">
+                    <h3>Directions</h3>
+                </button>
+            </span>
+        </div>
+        <div id="nav_padding"></div>
+
+        <div id="intro" class="center">
+            <div class="column no_gap">
+                <h1>Moulin Garnier</h1>
+                <p>Bazoges-en-Pareds</p>
+            </div>
+            <button type="button" aria-hidden="true" id="down_button" onclick="scroll_to('about')">
+                <img aria-hidden="true" id="down_button_img" class="invert" src="static/images/symbols/chevron.down.png">
+            </button>
+        </div>
+
+        <div id="about" class="section center">
+            <div class="wide column big_gap">
+                <h1>About</h1>
+                <div class="row">
+                    <div class="column min_width">
+                        <p>The College and the ICU are committed to continually improving your education and wider experience and your feedback plays a vital role in shaping how we do this.</p>
+                        <p>The College is committed to fostering a working environment where individuals are treated with courtesy and respect. Student questionnaire responses must not be used to insult members of staff or other students, and comments which may cause offence will be removed from the results. It is also important to be mindful of unconscious bias and to avoid feedback shaped by stereotypes of gender, ethnicity or other protected characteristics.</p>
+                        <p>While this questionnaire is confidential, you should avoid self-identification by referring to personal or other identifying information in your free text comments. To ensure that all feedback is taken on board, your responses will be considered for all modules, regardless of the number of students registered on each module.</p>
+                        <p>Thank you for taking the time to participate in the MEQ. Your feedback will help to shape education here at Imperial for the better.</p>
+                    </div>
+                    <div class="center min_width">
+                        <img style="max-height: 500px;" class="portrait" aria-hidden="true" src="static/images/general/aerial.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="photos" class="section fill center">
+            <div class="wide column big_gap">
+                <h1>Photos</h1>
+                <div class="column">
+                    <h2>Kitchen & Salon</h2>
+                    <div class="row">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                    </div>
+                    <p>The College and the ICU are committed to continually improving your education and wider experience and your feedback plays a vital role in shaping how we do this.</p>
+                </div>
+                <div class="column">
+                    <h2>Bedrooms & Bathrooms</h2>
+                    <div class="row">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                    </div>
+                    <p>The College is committed to fostering a working environment where individuals are treated with courtesy and respect. Student questionnaire responses must not be used to insult members of staff or other students, and comments which may cause offence will be removed from the results. It is also important to be mindful of unconscious bias and to avoid feedback shaped by stereotypes of gender, ethnicity or other protected characteristics.</p>
+                </div>
+                <div class="column">
+                    <h2>Passage & Utilities</h2>
+                    <div class="row">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                    </div>
+                    <p>While this questionnaire is confidential, you should avoid self-identification by referring to personal or other identifying information in your free text comments. To ensure that all feedback is taken on board, your responses will be considered for all modules, regardless of the number of students registered on each module.</p>
+                </div>
+                <div class="column">
+                    <h2>Drive & Gardens</h2>
+                    <div class="row">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                        <img aria-hidden="true" class="landscape item" src="/static/images/general/aerial.jpeg">
+                    </div>
+                    <p>Thank you for taking the time to participate in the MEQ. Your feedback will help to shape education here at Imperial for the better.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="facilities" class="section center">
+            <div class="wide column big_gap">
+                <h1>Facilities</h1>
+                <div class="row">
+                    <div class="center min_width">
+                        <img style="max-height: 500px;" class="portrait" aria-hidden="true" src="static/images/general/aerial.jpeg">
+                    </div>
+                    <div class="column min_width">
+                        <p>The College and the ICU are committed to continually improving your education and wider experience and your feedback plays a vital role in shaping how we do this.</p>
+                        <p>The College is committed to fostering a working environment where individuals are treated with courtesy and respect. Student questionnaire responses must not be used to insult members of staff or other students, and comments which may cause offence will be removed from the results. It is also important to be mindful of unconscious bias and to avoid feedback shaped by stereotypes of gender, ethnicity or other protected characteristics.</p>
+                        <p>While this questionnaire is confidential, you should avoid self-identification by referring to personal or other identifying information in your free text comments. To ensure that all feedback is taken on board, your responses will be considered for all modules, regardless of the number of students registered on each module.</p>
+                        <p>Thank you for taking the time to participate in the MEQ. Your feedback will help to shape education here at Imperial for the better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nearby" class="section fill center">
+            <div class="narrow">
+                <h1>Things To Do</h1>
+            </div>
+        </div>
+
+        <div id="directions" class="section center">
+            <div class="wide column big_gap">
+                <h1>Directions</h1>
+                <div class="row">
+                    <div class="column min_width">
+                        <p>The College and the ICU are committed to continually improving your education and wider experience and your feedback plays a vital role in shaping how we do this.</p>
+                        <p>The College is committed to fostering a working environment where individuals are treated with courtesy and respect. Student questionnaire responses must not be used to insult members of staff or other students, and comments which may cause offence will be removed from the results. It is also important to be mindful of unconscious bias and to avoid feedback shaped by stereotypes of gender, ethnicity or other protected characteristics.</p>
+                        <p>While this questionnaire is confidential, you should avoid self-identification by referring to personal or other identifying information in your free text comments. To ensure that all feedback is taken on board, your responses will be considered for all modules, regardless of the number of students registered on each module.</p>
+                        <p>Thank you for taking the time to participate in the MEQ. Your feedback will help to shape education here at Imperial for the better.</p>
+                    </div>
+                    <iframe class="min_width" title="Map" src="https://www.google.com/maps/embed/v1/place?q=8CRXM422+C4&key="></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="book" class="section fill center">
+            <div class="narrow">
+                <h1>Book</h1>
+            </div>
+        </div>
+
+        <div id="footer" class="section center">
+            <p id="copyright">Copyright © Moulin Garnier</p>
+        </div>
+    </body>
+</html>

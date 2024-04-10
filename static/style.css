@@ -1,0 +1,233 @@
+/* CONSTANTS */
+:root {
+    --lighter: rgba(255, 255, 255, 0.2);
+    --darker: rgba(0, 0, 0, 0.1);
+    --secondary: #8A8A8E;
+	--accent: #007AFF;
+
+    --nav_height: 60px;
+    --nav_button_height: 60px;
+    --nav_buttons_count: 5;
+    --animation_duration: 0.35s;
+    --narrow: 800px;
+    --wide: 1200px;
+}
+@media(prefers-color-scheme: light) {
+    :root {
+        --primary: black;
+        --background: white;
+        --fill: var(--darker)
+    }
+}
+@media(prefers-color-scheme: dark) {
+    :root {
+        --primary: white;
+        --background: black;
+        --fill: var(--lighter)
+    }
+}
+
+/* ROOT */
+:root {
+    color: var(--primary);
+    background-color: var(--background);
+    scroll-behavior: smooth;
+    text-align: center;
+}
+* {
+    font-family: system-ui;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* FONTS */
+p {
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+/* CONTENT */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section {
+    padding: 100px 20px;
+    scroll-margin-top: var(--nav_height);
+}
+.min_width {
+    min-width: 300px;
+    flex: 1;
+}
+.item {
+    min-width: 300px;
+    max-width: 400px;
+    flex: 1;
+}
+
+/* HELPERS */
+.fill {
+    background-color: var(--fill);
+}
+.narrow {
+    max-width: var(--narrow);
+}
+.wide {
+    max-width: var(--wide);
+}
+.transition {
+    transition: all var(--animation_duration);
+}
+.no_gap {
+    gap: 0px;
+}
+.big_gap {
+    gap: 50px;
+}
+.shadow {
+    box-shadow: 0px 5px 10px var(--darker);
+}
+
+/* IMAGES */
+img {
+    object-fit: cover;
+    overflow: hidden;
+}
+.symbol {
+    width: 20px;
+    height: 20px;
+}
+.square {
+    aspect-ratio: 1;
+}
+.portrait {
+    aspect-ratio: 3/4;
+}
+.landscape {
+    aspect-ratio: 16/9;
+}
+
+/* BUTTONS */
+button, a {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity var(--animation_duration);
+}
+@media(hover: hover) {
+    button:hover, a:hover {
+        opacity: 0.75;
+    }
+}
+
+/* NAVIGATION */
+#nav {
+    position: fixed;
+    width: 100%;
+    height: var(--nav_height);
+    background-color: var(--background);
+    z-index: 2;
+}
+#nav_bar {
+    width: 100%;
+    height: var(--nav_height);
+    background-color: var(--background);
+    z-index: 2;
+    justify-content: space-between;
+}
+#nav_padding {
+    height: var(--nav_height);
+}
+#nav_buttons {
+    position: absolute;
+    background-color: var(--background);
+}
+#book_button {
+    background-color: var(--primary);
+    color: var(--background);
+}
+.nav_button {
+    padding: 0 20px;
+    line-height: var(--nav_button_height);
+}
+@media(min-width: 1000px) {
+    #nav_buttons {
+        z-index: 2;
+        flex-direction: row;
+        top: calc((var(--nav_height) - var(--nav_button_height))/2);
+    }
+    #nav_menu {
+        display: none;
+    }
+}
+@media(max-width: 1000px) {
+    #nav_buttons {
+        z-index: 0;
+        width: 100%;
+        flex-direction: column;
+        top: calc(var(--nav_height) - var(--nav_buttons_count) * var(--nav_button_height));
+    }
+    #nav_buttons .nav_button {
+        width: 100%;
+    }
+    #nav_buttons.disclosed {
+        top: var(--nav_height);
+    }
+    #nav_menu {
+        display: block;
+    }
+}
+
+/* INTRO */
+#intro {
+    color: white;
+    position: relative;
+    width: 100%;
+    max-height: calc(100vh - var(--nav_height));
+    aspect-ratio: 16/9;
+    scroll-margin-top: var(--nav_height);
+    transition: background-image var(--animation_duration);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#down_button {
+    filter: invert();
+    position: absolute;
+    bottom: 0px;
+    transition: opacity var(--animation_duration);
+    z-index: 1;
+}
+@media(max-aspect-ratio: 16/10) {
+    #down_button {
+        opacity: 0;
+    }
+}
+#down_button_img {
+    width: calc(20px + 3vh);
+    height: calc(20px + 3vh);
+    margin: 50px;
+    margin-bottom: 0;
+}
+
+/* FOOTER */
+#footer {
+    padding: 50px 20px;
+}
