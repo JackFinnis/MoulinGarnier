@@ -75,17 +75,15 @@ p {
 }
 .min_width {
     min-width: 300px;
+    max-width: 1000px;
     flex: 1;
 }
 .item {
     min-width: 300px;
     max-height: 300px;
     flex: 1;
-}
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: flex;
+    justify-content: center;
 }
 
 /* HELPERS */
@@ -113,7 +111,7 @@ p {
 
 /* IMAGES */
 img {
-    object-fit: cover;
+    object-fit: contain;
     overflow: hidden;
 }
 .symbol {
