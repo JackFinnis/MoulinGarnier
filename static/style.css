@@ -35,7 +35,7 @@
     text-align: center;
 }
 * {
-    font-family: system-ui;
+    font-family: Lora;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -61,6 +61,9 @@ p {
     align-items: center;
     gap: 20px;
 }
+.align_leading {
+    align-items: flex-start;
+}
 .center {
     display: flex;
     justify-content: center;
@@ -76,8 +79,13 @@ p {
 }
 .item {
     min-width: 300px;
-    max-width: 400px;
+    max-height: 300px;
     flex: 1;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* HELPERS */
@@ -135,6 +143,30 @@ button, a {
     button:hover, a:hover {
         opacity: 0.75;
     }
+}
+.large_button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--background);
+}
+.large_button img {
+    width: 20px;
+    height: 20px;
+    filter: invert();
+}
+@media(prefers-color-scheme: dark) {
+    .large_button img {
+        filter: none;
+    }
+}
+
+li {
+    text-align: left;
 }
 
 /* NAVIGATION */
