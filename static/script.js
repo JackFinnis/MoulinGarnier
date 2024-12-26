@@ -16,15 +16,3 @@ function toggle_nav_buttons() {
     }, 0.35 * 1000)
 }
 toggle_nav_buttons()
-
-total_slides = 3
-current_slide = 0
-function next_slide() {
-    intro.style.backgroundImage = `url('/static/images/slides/${current_slide}.jpeg')`
-    current_slide = (current_slide + 1) % total_slides
-
-    setTimeout(function() {
-        next_slide()
-    }, 5 * 1000)
-}
-next_slide()
